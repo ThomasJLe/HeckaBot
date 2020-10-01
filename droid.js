@@ -39,6 +39,7 @@ class Reminder {
 // Message Events
 /*
 	Reminder Command structure
+	!setReminder ddmmyyyy 2300 description
 	1. Class 'Reminder' and Data Structure of Reminder to hold inputs
 	3. Create setInterval or setTimeout event for reminder?
 	Test general chat channel ID = '701608486517211169'
