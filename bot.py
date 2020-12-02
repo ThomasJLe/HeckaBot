@@ -17,7 +17,9 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 ffmpeg_opts = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
-voice_clients = {}
+quotes = ['Apple are nothing but Trumpers.', 'Apple sucks!', 'The best way to get started is to quit talking and begin doing.', 'Don\'t let yesterday take up too much of today.',
+        'We generate fears while we sit. We overcome them by action.', 'Whether you think you can or think you can\'t, you\'re right', 'Creativity is intelligence having fun.',
+         'You are never too old to set another goal or to dream a new dream.', 'To see what is right and not do it is a lack of courage.', 'Reading is to the mind, as excercise is to the body.']
 
 # Joke Section Global Count/File open
 lineCount = 0
@@ -166,4 +168,9 @@ async def joke(ctx):
     else:
         lineCount = lineCount + 1
     
+
+@bot.command(name='quote', aliases=['q', 'Q'], brief='prints a random quote', description='Prints a random inspirational or funny quote')
+async def quote(ctx):
+    quote = quotes[random.randint(0,9)]
+    await ctx.send(quote)
 bot.run(TOKEN)
