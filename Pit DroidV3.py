@@ -41,7 +41,7 @@ async def set_stopwatch(ctx, time, description):
     await ctx.send('Countdown finished -> ' + description)
     return
 
-@bott.command(name = '!set_reminder', brief = 'Give a date, time, and description\nUsage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
+@bot.command(name = '!set_reminder', brief = 'Give a date, time, and description\nUsage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
 # Set Reminder
 async def set_reminder(ctx, date, time, description):
     # Add to List
