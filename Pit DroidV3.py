@@ -1,4 +1,3 @@
-#Pit Droid.py
 import datetime
 import asyncio
 import discord
@@ -8,8 +7,8 @@ from datetime import timedelta, datetime
 from datetime import date
 
 Token = open("token.txt", "r").read()
-client = discord.Client()
-client = commands.Bot(command_prefix='!')
+bot = discord.Client()
+bot = commands.Bot(command_prefix='!')
 
 # Reminder List
 reminderList = []
@@ -22,15 +21,15 @@ class Reminder:
     def show(self):
         pass
     
-@client.event
+@bot.event
 async def on_ready():
-    print(f'{client.user} logged in!')
+    print(f'{bot.user} logged in!')
 async def on_message(message):
     # DO NOT RESPOND TO SELF
-    if message.author == client.user:
+    if message.author == bot.user:
         return
 
-@client.command(name = '!set_stopwatch', brief = 'A quick countdown timer\nUsage: !set_stopwatch minutes Description', description = 'Example: "!set_stopwatch 10m Brush teeth"')
+@bot.command(name = '!set_stopwatch', brief = 'A quick countdown timer\nUsage: !set_stopwatch minutes Description', description = 'Example: "!set_stopwatch 10m Brush teeth"')
 # Set Stopwatch - only supports minutes and a description
 async def set_stopwatch(ctx, time, description):
     seconds = 0
@@ -42,7 +41,7 @@ async def set_stopwatch(ctx, time, description):
     await ctx.send('Countdown finished -> ' + description)
     return
 
-@client.command(name = '!set_reminder', brief = 'Give a date, time, and description\nUsage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
+@bott.command(name = '!set_reminder', brief = 'Give a date, time, and description\nUsage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
 # Set Reminder
 async def set_reminder(ctx, date, time, description):
     # Add to List
@@ -67,7 +66,7 @@ async def set_reminder(ctx, date, time, description):
     await asyncio.sleep(halfSeconds)
     await ctx.send('Here is your reminder -> ' + description)
 
-@client.command(name = '!show_reminders', brief = 'Show all reminders(past/present)', description = 'All reminders that are currently active or have already passed will be displayed.')
+@bot.command(name = '!show_reminders', brief = 'Show all reminders(past/present)', description = 'All reminders that are currently active or have already passed will be displayed.')
 # Show reminders
 async def show_reminders(ctx):
     count = 1
@@ -82,4 +81,4 @@ async def show_reminders(ctx):
         else:
             await ctx.send('Reminder: ' + str(count) + '-> Active\nDate: ' + object.date + '\nTime: ' + object.time + '\nDescription: ' + object.description + '\n')
             count = count + 1
-client.run(Token)
+bot.run(Token)
