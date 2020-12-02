@@ -15,12 +15,6 @@ bot = commands.Bot(command_prefix='!')
 ffmpeg_opts = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
 voice_clients = {}
 
-queue = {}
-
-@bot.event
-async def on_connect():
-    ctx.message
-
 @bot.event
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord')
