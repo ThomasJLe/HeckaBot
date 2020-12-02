@@ -29,7 +29,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-@bot.command(name = '!set_stopwatch', brief = 'A quick countdown timer\nUsage: !set_stopwatch minutes Description', description = 'Example: "!set_stopwatch 10m Brush teeth"')
+@bot.command(name = '!set_stopwatch', brief = 'A quick countdown timer Usage: !set_stopwatch minutes Description', description = 'Example: "!set_stopwatch 10m Brush teeth"')
 # Set Stopwatch - only supports minutes and a description
 async def set_stopwatch(ctx, time, description):
     seconds = 0
@@ -41,7 +41,7 @@ async def set_stopwatch(ctx, time, description):
     await ctx.send('Countdown finished -> ' + description)
     return
 
-@bot.command(name = '!set_reminder', brief = 'Give a date, time, and description\nUsage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
+@bot.command(name = '!set_reminder', brief = 'Give a date, time, and description Usage: !set_reminder Date Time Description', description = 'Ex. "!set_reminder 2020-02-15 19:20:00 Brush teeth"')
 # Set Reminder
 async def set_reminder(ctx, date, time, description):
     # Add to List
