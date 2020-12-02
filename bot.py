@@ -19,6 +19,10 @@ bot = commands.Bot(command_prefix='!')
 ffmpeg_opts = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
 voice_clients = {}
 
+# Joke Section Global Count/File open
+lineCount = 0
+jokesFile = open("jokes.txt", "r")
+
 # Shows when the bot is up and running
 @bot.event
 async def on_ready():
@@ -150,5 +154,16 @@ async def show_reminders(ctx):
 
 @bot.command(name='quote', brief='prints a random quote', description='Prints a random inspirational or funny quote')
 async def quote(ctx):
+    
+@bot.command(name = 'joke', brief = 'Returns a terrible joke', description = 'A joke - not guaranteed to be funny')
+# Joke Function - reads a line from "jokes.txt" for each "!joke" command. Resets to beginning of file when last line has been reached.
+async def joke(ctx):
+    global lineCount
+    await ctx.send(jokesFile.readline() + '\n')
+    if lineCount == 14:
+        lineCount = 0
+        jokesFile.seek(0)
+    else:
+        lineCount = lineCount + 1
     
 bot.run(TOKEN)
