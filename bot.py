@@ -5,6 +5,7 @@ import youtube_dl
 import datetime
 import asyncio
 import time
+import random
 from pafy import new
 from discord import FFmpegPCMAudio
 from dotenv import load_dotenv
