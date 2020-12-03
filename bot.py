@@ -181,4 +181,98 @@ async def joke(ctx):
 async def quote(ctx):
     quote = quotes[random.randint(0,9)]
     await ctx.send(quote)
+        
+#bot command for the apple story. 
+@bot.command(name = 'Apple', brief = 'Story time', description = 'The story of why apple sucks!')
+async def Apple(ctx):
+    f = open("Apple_Story.txt", "r")
+    await ctx.send('Story time\n' + f.read())
+        
+        
+#list of commands that output each week's set homework. Yes it was a pain
+@bot.command(name='Hw#', brief='Your weekly assignment', description='Prints out the assignment for week 1')
+async def Hw1(ctx):
+    f = open("1.txt", "r")
+    await ctx.send('Opening Week 1 Homework\n' + f.read())    
+    
+@bot.command(name='Hw2', brief='Your weekly assignment', description='Prints out the assignment for week 2')
+async def Hw2(ctx):
+    f = open("2.txt", "r")
+    await ctx.send('Opening Week 2 Homework\n' + f.read())    
+    
+@bot.command(name='Hw3', brief='Your weekly assignment', description='Prints out the assignment for week 3')
+async def Hw3(ctx):
+    f = open("3.txt", "r")
+    await ctx.send('Opening Week 3 Homework\n' + f.read())    
+    
+@bot.command(name='Hw4', brief='Your weekly assignment', description='Prints out the assignment for week 4')
+async def Hw4(ctx):
+    f = open("4.txt", "r")
+    await ctx.send('Opening Week 4 Homework\n' + f.read())    
+    
+@bot.command(name='Hw5', brief='Your weekly assignment', description='Prints out the assignment for week 5')
+async def Hw5(ctx):
+    f = open("5.txt", "r")
+    await ctx.send('Opening Week 5 Homework\n' + f.read())    
+    
+@bot.command(name='Hw6', brief='Your weekly assignment', description='Prints out the assignment for week 6')
+async def Hw6(ctx):
+    f = open("6.txt", "r")
+    await ctx.send('Opening Week 6 Homework\n' + f.read())    
+    
+@bot.command(name='Hw7', brief='Your weekly assignment', description='Prints out the assignment for week 7')
+async def Hw7(ctx):
+    f = open("7.txt", "r")
+    await ctx.send('Opening Week 7 Homework\n' + f.read())    
+    
+@bot.command(name='Hw8', brief='Your weekly assignment', description='Prints out the assignment for week 8')
+async def Hw8(ctx):
+    f = open("8.txt", "r")
+    await ctx.send('Opening Week 8 Homework\n' + f.read())    
+    
+@bot.command(name='Hw9', brief='Your weekly assignment', description='Prints out the assignment for week 9')
+async def Hw9(ctx):
+    f = open("9.txt", "r")
+    await ctx.send('Opening Week 9 Homework\n' + f.read())    
+    
+@bot.command(name='Hw10', brief='Your weekly assignment', description='Prints out the assignment for week 10')
+async def Hw10(ctx):
+    f = open("10.txt", "r")
+    await ctx.send('Opening Week 10 Homework\n' + f.read())    
+
+@bot.command(name='Hw11', brief='Your weekly assignment', description='Prints out the assignment for week 11')
+async def Hw11(ctx):
+    f = open("11.txt", "r")
+    await ctx.send('Opening Week 11 Homework\n' + f.read())    
+
+@bot.command(name='Hw12', brief='Your weekly assignment', description='Prints out the assignment for week 12')
+async def Hw12(ctx):
+    f = open("12.txt", "r")
+    await ctx.send('Opening Week 12 Homework\n' + f.read())    
+
+@bot.command(name='Hw13', brief='Your weekly assignment', description='Prints out the assignment for week 13')
+async def Hw13(ctx):
+    f = open("13.txt", "r")
+    await ctx.send('Opening Week 13 Homework\n' + f.read())    
+
+#the censor control. no voodoo words here
+class MyClient(discord.Client):
+
+    async def on_ready(self):
+        print('Logged on as', self.user)
+
+    async def on_message(self, message):
+        word_list = ['Apple', '254 sucks', "FreeBSD"]
+
+        # don't respond to ourselves
+        if message.author == self.user:
+            return
+
+        messageContent = message.content
+        if len(messageContent) > 0:
+            for word in word_list:
+                if word in messageContent:
+                    await message.delete()
+                    await message.channel.send('Do not say that!')
+client = MyClient()
 bot.run(TOKEN)
