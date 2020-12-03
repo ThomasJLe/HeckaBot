@@ -180,9 +180,6 @@ async def show_reminders(ctx):
             await ctx.send('Reminder: ' + str(count) + '-> Active\nDate: ' + object.date + '\nTime: ' + object.time + '\nDescription: ' + object.description + '\n')
             count = count + 1
 
-@bot.command(name='quote', brief='prints a random quote', description='Prints a random inspirational or funny quote')
-async def quote(ctx):
-    
 @bot.command(name = 'joke', brief = 'Returns a terrible joke', description = 'A joke - not guaranteed to be funny')
 # Joke Function - reads a line from "jokes.txt" for each "!joke" command. Resets to beginning of file when last line has been reached.
 async def joke(ctx):
