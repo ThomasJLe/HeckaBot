@@ -109,6 +109,23 @@ class Reminder:
     def show(self):
         pass
 
+@bot.command(name = 'convert_time', brief = 'Converts a 12 hour time to 24 hour time format', description = 'Example: "!convert_time 09:21:25 PM"')
+# Convert Time Format - Given a 12 hour time (AM/PM), the function will return a 24 hour time.
+async def convert_time(ctx, time):
+    # Check if time given is 12AM
+    if time[-2:] == 'AM' and time[:2] == '12':
+        await ctx.send('00' + time[2:-2])
+    elif time[-2:] == 'AM':
+        # Simple case any AM time - just return without "AM"
+        await ctx.send(time[:-2])
+    elif time[-2:] == 'PM' and time[:2] == '12':
+        # Check if time given is 12PM
+        await ctx.send(time[:-2])
+    else:
+        # Add 12 hours and remove "PM"
+        time = str(int(time[:2]) + 12) + time[2:8]
+        await ctx.send(time + ' ')
+
 @bot.command(name = 'set_stopwatch', brief = 'A quick countdown timer\nUsage: !set_stopwatch minutes Description', description = 'Example: "!set_stopwatch 10m Brush teeth"')
 # Set Stopwatch - only supports minutes and a description
 async def set_stopwatch(ctx, time, description):
