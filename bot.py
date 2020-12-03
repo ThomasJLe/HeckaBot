@@ -30,6 +30,14 @@ jokesFile = open("jokes.txt", "r")
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord')
 
+# Voice State Update - Notification when a user joins the voice channel.
+@bot.event
+async def on_voice_state_update(member, before, after):
+        generalChat = bot.get_channel(747900601169608715)
+        if before.channel is None and after.channel is not None:
+                if after.channel.id == 747900601169608716:
+                        await generalChat.send(member.name + ' has joined General Voice Chat')
+
 # Simple command that says hello back to the user that sent the command
 @bot.command(name='hello', brief='The bot says hello back', description='The bot says hello back to the user that sent the command')
 async def greeting(ctx):
