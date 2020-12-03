@@ -1,0 +1,8 @@
+CPSC 254 Lab 7 
+Git Hub Versioning
+1.	Read ProGit pages 5-48
+2.	Download and install Git.  Include a screenshot when you send your homework
+3.	Plan to use Git to manage version control as you develop your team’s project.
+4.	Navigate to Bitbucket.org, create a user account, and make a remote repository for Git, Include a screenshot here too.
+5.	Read the readme file on Bitbucket and follow the instructions there.
+6.	Copy the url for your repository.  You will need this for Git.

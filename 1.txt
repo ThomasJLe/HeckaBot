@@ -1,0 +1,53 @@
+CPSC 254 Lab
+Installing a Hypervisor and Free BSD
+
+Week 1 Lab Project
+Part 1 Installing a Hypervisor
+For this school the usual choice of hypervisors is Virtual Box by Oracle.
+1.	Download Oracle Virtual Box from https://www.virtualbox.org/wiki/Downloads
+2.	Install VirtualBox on your computer
+
+Lab 1 Part 2 Install FreeBSD 11.0
+1.	Go to https://goo.gl/forms/MeK8jByvY1mrsQ7D3 and fill out the form.
+2.	Read Chapters 1 and 2 from the FreeBSD Handbook.
+3	A. (ftp)  From ftp://ftp.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/11.0/ if you are familiar with ftp 
+3  B (https)  From https://www.freebsd.org/where.html download the appropriate image for your computer. Macintosh and almost all PC’s should choose AMD64
+3.	Following the instructions in Chapter 2 of the FreeBSD Handbook, create the installation media using your own computer 
+
+Lab 1 Part 3 Written
+Do not use Google or other Internet search engines to answer the questions. Doing so ruins the fun. 
+I will be very disappointed if I see that you are using an Internet search engine.
+
+Please answer the following questions and email the results to me before next week’s class.
+dheckathorn@fullerton.edu
+1.	Where is your home directory?
+2.	Read the manual, try the command `man man` 
+•	Include a screen shot of this in your email.
+3.	Find a suitable text editor, such as `vi`, and write some text in a file. Save the file in your home directory. 
+	Don't know how to use `vi`? Read it's manual page, `man vi`.  
+4.	Find a way to print the date to the console.  
+•	What command did you use?
+5.	Find a way to print this month's calendar to the console.  
+•	What command did you use?
+6.	Is there a way to create reminders?  
+•	What is it?
+7.	Is there a C or C++ compiler? If so, write a hello world program in your home directory.
+•	What command did you use to compile the program?
+8.	Is there a debugger? If so, use the debugger to step through your hello world program.
+•	How did you invoke the debugger?
+9.	Is there a way to show all the processes? Can you see who owns the processes?
+•	What command did you se?
+10.	Is the system running any daemons? What daemons are running? Is one of the daemons sshd?
+11.	Does FreeBSD support networking? If so, can you figure out how to get your computer onto a network?
+•	What steps did you use?
+12.	Can you add a user to your system?
+•	What command did you use?
+13.	How do you become the super user, aka root?
+•	What command did you use?
+14.	There's a command called `finger`. What does it do? Can you use your text editor to update your plan?
+•	What is finger?
+15.	Let's say two different users are logged into the same computer, can they talk or instant message one another?
+16.	Copy one of your projects from CPSC 131 onto your FreeBSD system. Can you compile it and run it?
+•	Name of compiled program
+17.	Is there a program named `telnet`? What does it do?
+18.	What happens when you run `telnet voronoi.ecs.fullerton.edu`?

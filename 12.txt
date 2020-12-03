@@ -1,0 +1,18 @@
+
+CPSC 254 Lab Week 12
+Remote Access with SSH
+
+1.	Boot your server and install openssh-server
+2.	Determine your ip address with the command ifconfig -a
+3.	Bootup Ubuntu workstation
+4.	Open a connection to the server with the command ssh pete@server IP -p 22
+5.	Cd to /silo/shares and verify that pete has access to some but not all files.
+6.	Open the fine instructions with vi and write the line “pete is in” then close the file.
+7.	Use the command touch to create a file named petestest
+8.	Determine the group and permissions with ls -l
+9.	Exit the connection with the command quit
+10.	Repeat steps 4 – 8 substituting each user’s name.
+11.	After the final user has completed all steps except step 9, take a screen shot of the result of ls -l and a screen shot of the result of cat instructions
+12.	 You just got a call from your boss on a Saturday afternoon.  He says that pete has been fired and must be removed from all network access immediately.  
+Since this is your day off, you don’t want to go in to work, so you establish a ssh connection as admin and remove pete.
+a.	What command did you use to remove pete?

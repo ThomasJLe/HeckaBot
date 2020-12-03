@@ -1,0 +1,29 @@
+CPSC 254 Lab 8 
+Make a simple website
+
+Several weeks ago you installed the Apache httpd daemon.  Today, you will use this daemon to create a very simple website.  
+
+If you are familiar with HTML, you are welcome to make this web page as interesting as you wish.  
+
+
+1.	Navigate to this link and watch this youtube video
+a.	https://www.youtube.com/watch?v=p90yWh26j94
+2.	Follow the instructions there to make a webpage of your own.
+Your website must contain:
+	Your name
+A title
+A hyperlink to a different page on your website
+An image
+3.	When you finish, make a screen shot of your web page and submit it.
+
+There are several good HTML tutorials available.  If you want to learn how to dress up the web page you just created, here is a quick, free tutorial.
+https://www.w3schools.com/html/html_intro.asp
+
+By the way, W3 schools is loaded with web tutorials.
+
+
+The file “syslog.txt” is included in the Labs folder on Titanium.  This is a copy of the system log of a Ubuntu 18.04.  
+Use grep to determine how many entries exist containing the phrase “Job `cron.daily' “.
+
+Show the command you used, and include a screenshot of the result of this step.
+Use the crontab command to cause your Linux system to generate a message every hour.  What command did you use?

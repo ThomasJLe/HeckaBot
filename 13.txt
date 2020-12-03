@@ -1,0 +1,12 @@
+CPSC254 Lab 13 
+Installing a Second GUI
+
+Many times, you like the prefer one GUI over another.  In this lab, you will have the opportunity to examine various other gui’s.
+ Lab 9 Install KDE on Ubuntu
+1.	Type sudo apt-get install kubuntu-desktop
+2.	Reboot and select KDE. the circle in the lower-right corner will open a menu
+3.	Try many of the features offered by KDE. The desktop is similar to Windows.
+4.	It may be necessary to install Gnome in order to reload the Gnome desktop.  Use the command sudo apt install gnome-session gdm3
+5.	You might wish to checkout other gui’s, like cinnamon from mint
+
+

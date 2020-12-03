@@ -1,0 +1,54 @@
+CPSC 254 Lab 10
+Utilities
+
+Use the cron command to make a shell script that runs every 5 minutes and prints time and date.
+The file syslog.x can be found in the directory /var/log.  Use grep to determine how many entries exist containing the phrase “Job cron.daily“.
+
+Show the command you used and include a screenshot of the result of this step.
+Use the crontab command to cause your Linux system to generate a message every hour.  What command did you use?
+
+Other utilities:
+W Display who is logged into the system and what process executed by them.
+Findmnt find mount file systems. It is used to list mount devices and can also mount or unmount devices as and when required
+Examples:
+$findmnt
+ 
+To get output in list format.
+$ findmnt -l
+ 
+List file systems mounted in fstab.
+$ findmnt -s
+ 
+List mounted  files systems by file type
+$ findmnt -t ext4
+ 
+ 
+Ss socket statistics is a good alternative to netstat to gather information from kernel space and plays faster than the netstat utility.
+Examples:
+List all connections
+$ ss |less
+ 
+Greb only tcp traffic
+ $ ss -A tcp
+ 
+Grab process name and pid
+$ ss -ltp
+ 
+A number of useful network tools are available with net-tools which must be installed.
+
+sudo apt install net-tools
+
+These are the tools included with net-tools
+arp is used to manipulate the kernel's ARP cache, usually to add or delete an entry, or to dump the entire cache.
+dnsdomainname reports the system's DNS domain name.
+domainname reports or sets the system's NIS/YP domain name.
+hostname reports or sets the name of the current host system.
+ifconfig is the main utility for configuring network interfaces.
+nameif names network interfaces based on MAC addresses.
+netstat is used to report network connections, routing tables, and interface statistics..
+nisdomainname does the same as domainname.
+plipconfig is used to fine tune the PLIP device parameters, to improve its performance.
+rarp is used to manipulate the kernel's RARP table.
+route is used to manipulate the IP routing table.
+slattach attaches a network interface to a serial line. This allows you to use normal terminal lines for point-to-point links to other computers.
+ypdomainname does the same as domainname.

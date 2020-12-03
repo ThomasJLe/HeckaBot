@@ -1,0 +1,44 @@
+CPSC 254 Lab 11
+Download, Install and Configure a Linux Server
+
+1.	Download Ubuntu Server 20.04 from https://ubuntu.com/download/server/thank-you?version=20.04.1&architecture=amd64
+2.	Install the server  as a VM in your hypervisor
+3.	Make the following users with the useradd command : joe, pete, charlie, sue, karen, mary
+4.	Make the following groups with the groupadd command; ourgroup, newgroup, secure
+5.	Add joe to ourgroup with the usermod -G command
+6.	Test whether the command worked with the getent command  getent group ourgroup
+7.	Add mary to ourgroup and newgroup
+8.	Make yourself a member of all three groups
+9.	Add pete and charlie to all three groups
+10.	Add karen and sue to newgroup and secure
+11.	Make a directory named /silo
+12.	Make a directory named /silo/shared
+13.	Change working directory to /silo/shared
+14.	Make a file named test1 using the command touch and assign 750 permissions
+15.	Temporarily change your group association to secure with the command 
+newgrp -secure
+16.	Make a file called test2
+17.	With the command ls -l determine that test1 and test2 are available to different groups
+18.	Change permissions on test2 to 770
+19.	Make the files securefile01, securefile02, securefile03, assign them to the secure group and give them 770 permissions
+20.	Make the file instructions, assign it to newgroup, and give it 770 permissions
+21.	Give all six users the password word
+
+Recap
+
+Ourgroup		newgroup		secure
+you		X			X		X
+mary		X			X		------
+pete		X			X		X
+charlie		X			X		X
+karen					X		X
+sue					X		X
+joe		X			----		----
+
+File			Group		Permissions
+test1			root			750
+test2 			newgroup		770
+instructions		newgroup		770
+securefile01		secure		770
+securefile02		secure		770
+securefile03		secure		770

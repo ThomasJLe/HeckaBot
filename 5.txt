@@ -1,0 +1,35 @@
+CPSC 254 Lab 5 
+Part 1 Install Apache2
+
+In Ubuntu, type sudo apt-get install apache2
+You will use Apache2 later to create a website
+Lab 5 Part 2
+Begin Class Project
+Read The Cathedral and the Bazaar
+Here's a link to Eric Raymond's The Cathedral and the Bazaar.
+This is a great summary of lessons for creating good open source software from CatB found in Wikipedia (https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar)
+Of these 19, there are 2 main points and five lessons that I feel are particularly important to think about as we develop our project.
+Key Point 1: Develop something you are interested in.
+1. Every good work of software starts by scratching a developer's personal itch.
+2. Good programmers know what to write. Great ones know what to rewrite (and reuse).
+•	18. To solve an interesting problem, start by finding a problem that is interesting to you.
+Key Point 2: Get feedback.
+•	7. Release early. Release often. And listen to your customers.
+•	8. Given a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.
+•	6. Treating your users as co-developers is your least-hassle route to rapid code improvement and effective debugging.
+o	10. If you treat your beta-testers as if they're your most valuable resource, they will respond by becoming your most valuable resource.
+o	11. The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.
+•	12. Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.
+Requirements for class projects;
+1.	Work with a small group:  no fewer than 2, no more than 3
+2.	Pick a project that all group members agree to work on
+3.	Must include existing software, available as open source
+4.	Must include original code written by your group
+5.	Must run on a PC or Mac on Linux or Free BSD
+6.	Must use Version Control Software
+7.	Must include documentation detailing
+a.	Team members and responsibilities of each
+b.	Title of project
+c.	Code showing modifications
+d.	Any tools used on project, including Version Control
+8.	Project is due the week before Final exam – you will demonstrate it then

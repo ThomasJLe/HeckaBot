@@ -1,0 +1,43 @@
+CPSC 254 Lab 4 
+Command Line Environment and Shell Scripting
+
+1.	Lab 4 Part 1 Command Line Environment
+a.	Execute the following:
+i.	Printenv
+1.	Submit answers to the following:
+a.	User name
+b.	Home
+c.	Name of shell
+d.	Current directory
+e.	 PATH
+
+2.	Create a new shell variable :
+a.	Test_var=’Hello World’
+Verify the new variable by entering echo $Test_var
+
+3.	Applications often set variables in a .conf file.  
+a.	Change current directory to /etc
+b.	Type ls *.conf 
+c.	Pick an interesting file and examine it.
+i.	Most variables are commented out, but are available for user configuration
+Submit the name of the file examined and a list of optional changes that a user may change.
+
+2.	Lab Part 2 Shell Scripting
+a.	Read “The Linux Command Line” pages 358-364
+b.	Using a text editor, enter the following text:
+#!/bin/bash
+# My first script
+echo "Hello World!"
+
+c.	Save the text as a file named “Hello_World”
+d.	Set permissions as follows:	
+i.	Owner R,W,X
+ii.	Group R,_, X
+iii.	Public R,_, X
+
+Submit commands used to accomplish this step
+e.	Temporarily add your current directory to the command path.
+Submit commands used to accomplish this step
+f.	Execute your script by typing the file name
+g.	Write a script to see current date, time, username, and current directory
+Submit copy of script

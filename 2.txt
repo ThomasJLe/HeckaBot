@@ -1,0 +1,11 @@
+CPSC 254 Lab #2 
+Postscript Font Installation
+
+1.	Read FreeBSD Handbook Chapter 5
+2.	On your FreeBSD installation, install XORG
+3.	Install Postscript fonts
+4.	Add a path for fonts to the X11 configuration file (might be a new file)
+5.	Install and enable either KDE or Gnome (your choice.  I prefer Gnome, but either choice will do)
+6.	Email a screen shot of use of one of the new fonts.  Due before class next week.
+
+Exit and reboot.  Did everything work?  If not, why?
