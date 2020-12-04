@@ -59,8 +59,10 @@ async def on_ready():
 # Voice State Update - Notification when a user joins the voice channel.
 @bot.event
 async def on_voice_state_update(member, before, after):
+        # Get the voice channel to send notifications
         generalChat = bot.get_channel(784205215573606462)
         if before.channel is None and after.channel is not None:
+                # Compare voice channel id to voice channels that support notifications
                 if after.channel.id == 783525355478188073:
                         await generalChat.send(member.name + ' has joined General Voice Chat')
 
@@ -155,11 +157,14 @@ async def convert_time(ctx, time):
 @bot.command(name = 'set_stopwatch', brief = 'A quick countdown timer', description = 'Usage: !set_stopwatch minutes Description -> Example: "!set_stopwatch 10m Brush teeth"')
 # Set Stopwatch - only supports minutes and a description
 async def set_stopwatch(ctx, time, description):
+    # Seconds variable for sleep function    
     seconds = 0
     if time.lower().endswith("m"):
         seconds += int(time[:-1]) * 60
         counter = f"{seconds // 60} minutes"
+    # Send confirmation back to user
     await ctx.send('Setting the stopwatch for:\nTime: ' + counter + '\nDescription: ' + description)
+    # Minutes coverted to seconds and passed to sleep function
     await asyncio.sleep(seconds)
     await ctx.send('Countdown finished -> ' + description)
     return
